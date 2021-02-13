@@ -14,7 +14,7 @@ export class NodeListItem extends React.Component {
                     <div className="line no-wrap"><a href={node.url} target="_blank">{node.url}</a></div>
                 </td>
                 <td data-label="Version">
-                    <div className="line">WIND 0.1.1</div>
+                    <div className="line">SOMETHING 0.1.1</div>
                 </td>
                 <td data-label="Current height">
                     <div className="line">{node.height}</div>
