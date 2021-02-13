@@ -16,10 +16,10 @@ export default class Currency {
         }
     }
 
-    static WIND = new Currency({
+    static SOMETHING = new Currency({
         id: '',
-        displayName: 'Wind',
-        shortName: 'WIND',
+        displayName: 'SOMETHING',
+        shortName: 'SOMETHING',
         precision: 8
     });
 
