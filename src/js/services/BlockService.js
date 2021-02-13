@@ -6,15 +6,15 @@ import {ApiClientService} from './ApiClientService';
 
 const transformBlock = block => {
     if (block.totalFee) {
-        block.totalFee = Money.fromCoins(block.totalFee, Currency.WIND);
+        block.totalFee = Money.fromCoins(block.totalFee, Currency.SOMETHING);
     }
 
     if (block.reward) {
-        block.reward = Money.fromCoins(block.reward, Currency.WIND);
+        block.reward = Money.fromCoins(block.reward, Currency.SOMETHING);
     }
 
     if (block.desiredReward) {
-        block.desiredReward = Money.fromCoins(block.desiredReward, Currency.WIND);
+        block.desiredReward = Money.fromCoins(block.desiredReward, Currency.SOMETHING);
     }
 
     return block;
