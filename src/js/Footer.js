@@ -2,22 +2,22 @@ import React from 'react';
 
 const socialLinks = [{
     id: 'github',
-    url: 'https://github.com/windcoinplatform/'
+    url: 'http://161.97.178.27:8080/custom'
 }, {
     id: 'twitter',
-    url: 'https://github.com/windcoinplatform'
+    url: 'http://161.97.178.27:8080/custom'
 }, {
     id: 'facebook',
-    url: 'https://github.com/windcoinplatform/'
+    url: 'http://161.97.178.27:8080/custom'
 }, {
     id: 'discord',
-    url: 'https://github.com/windcoinplatform'
+    url: 'http://161.97.178.27:8080/custom'
 }, {
     id: 'telegram',
-    url: 'https://github.com/windcoinplatform'
+    url: 'http://161.97.178.27:8080/custom'
 }, {
     id: 'reddit',
-    url: 'https://github.com/windcoinplatform/'
+    url: 'http://161.97.178.27:8080/custom'
 }];
 
 const Footer = ({version}) => {
@@ -30,7 +30,7 @@ const Footer = ({version}) => {
                     (<a key={item.id} className={`social ${item.id}`} href={item.url} target="_blank"></a>))}
             </div>
             <div>
-                <a className="fade" href="http://144.91.84.27:60863" target="_blank">WINDWALLET</a>
+                <a className="fade" href="http://144.91.84.27:60863" target="_blank">SOMETHINGWALLET</a>
             </div>
         </div>
     );
