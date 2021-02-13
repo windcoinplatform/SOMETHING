@@ -27,7 +27,7 @@ export class CurrencyService extends ApiClientService {
 
     get = assetId => {
         if (!assetId) {
-            return Promise.resolve(Currency.WIND);
+            return Promise.resolve(Currency.SOMETHING);
         }
 
         // TODO: remove after token is renamed
