@@ -1,6 +1,27 @@
 import React from 'react';
 
+const socialLinks = [{
+    id: 'github',
+    url: 'http://161.97.178.27:8080/custom'
+}, {
+    id: 'twitter',
+    url: 'http://161.97.178.27:8080/custom'
+}, {
+    id: 'facebook',
+    url: 'http://161.97.178.27:8080/custom'
+}, {
+    id: 'discord',
+    url: 'http://161.97.178.27:8080/custom'
+}, {
+    id: 'telegram',
+    url: 'http://161.97.178.27:8080/custom'
+}, {
+    id: 'reddit',
+    url: 'http://161.97.178.27:8080/custom'
+}];
 
+const Footer = ({version}) => {
+    return (
         <div className="menu-footer">
             <div>Version</div>
             <div>SOMETHING Team</div>
@@ -12,5 +33,7 @@ import React from 'react';
                 <a className="fade" href="http://161.97.178.27:8080/custom" target="_blank">SOMETHING</a>
             </div>
         </div>
- 
+    );
+}
+
 export default Footer;
