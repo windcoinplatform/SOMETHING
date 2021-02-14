@@ -146,7 +146,7 @@ const transformAssetScript = (currencyService, tx) => {
         return Object.assign(copyMandatoryAttributes(tx), {
             script: tx.script,
             asset,
-            fee: Money.fromCoins(tx.fee, Currency.SOMETHING)
+            fee: Money.fromCoins(tx.fee, Currency.SKS)
         })
     });
 };
@@ -209,7 +209,7 @@ const transformMassTransfer = (currencyService, spamDetectionService, tx) => {
 const transformAlias = (currencyService, tx) => {
     return Promise.resolve(
         Object.assign(copyMandatoryAttributes(tx), {
-            fee: Money.fromCoins(tx.fee, Currency.SOMETHING),
+            fee: Money.fromCoins(tx.fee, Currency.SKS),
             alias: tx.alias
         })
     );
@@ -220,7 +220,7 @@ const transformLease = (currencyService, tx) => {
         return Object.assign(copyMandatoryAttributes(tx), {
             recipient: tx.recipient,
             fee: Money.fromCoins(tx.fee, feeCurrency),
-            amount: Money.fromCoins(tx.amount, Currency.SOMETHING),
+            amount: Money.fromCoins(tx.amount, Currency.SKS),
             status: tx.status
         })
     });
@@ -292,7 +292,7 @@ const transformBurn = (currencyService, tx) => {
     return currencyService.get(tx.assetId).then(currency => {
         return Object.assign(copyMandatoryAttributes(tx), {
             amount: Money.fromCoins(tx.amount, currency),
-            fee: Money.fromCoins(tx.fee, Currency.SOMETHING)
+            fee: Money.fromCoins(tx.fee, Currency.SKS)
         });
     });
 };
@@ -301,7 +301,7 @@ const transformReissue = (currencyService, tx) => {
     return currencyService.get(tx.assetId).then(currency => {
         return Object.assign(copyMandatoryAttributes(tx), {
             amount: Money.fromCoins(tx.quantity, currency),
-            fee: Money.fromCoins(tx.fee, Currency.SOMETHING),
+            fee: Money.fromCoins(tx.fee, Currency.SKS),
             reissuable: tx.reissuable,
 
         });
@@ -315,7 +315,7 @@ const transformIssue = (currencyService, tx) => {
     return currencyService.get(c.id).then(currency => {
         return Object.assign(copyMandatoryAttributes(tx), {
             amount: Money.fromCoins(tx.quantity, currency),
-            fee: Money.fromCoins(tx.fee, Currency.SOMETHING),
+            fee: Money.fromCoins(tx.fee, Currency.SKS),
             name: tx.name,
             reissuable: tx.reissuable,
             decimals: tx.decimals,
@@ -341,8 +341,8 @@ const transformTransfer = (currencyService, spamDetectionService, tx) => {
 };
 
 const transformGenesis = (currencyService, tx) => {
-    const amount = Money.fromCoins(tx.amount, Currency.SOMETHING);
-    const fee = Money.fromCoins(tx.fee, Currency.SOMETHING);
+    const amount = Money.fromCoins(tx.amount, Currency.SKS);
+    const fee = Money.fromCoins(tx.fee, Currency.SKS);
 
     return Object.assign(copyMandatoryAttributes(tx), {
         amount,
