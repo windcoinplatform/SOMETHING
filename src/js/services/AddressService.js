@@ -19,10 +19,10 @@ export class AddressService extends ApiClientService {
         return this.getApi().addresses.details(address).then(balanceResponse => {
             const data = balanceResponse.data;
             return {
-                regular: Money.fromCoins(data.regular, Currency.SKS).toString(),
-                generating: Money.fromCoins(data.generating, Currency.SKS).toString(),
-                available: Money.fromCoins(data.available, Currency.SKS).toString(),
-                effective: Money.fromCoins(data.effective, Currency.SKS).toString()
+                regular: Money.fromCoins(data.regular, Currency.KSS).toString(),
+                generating: Money.fromCoins(data.generating, Currency.KSS).toString(),
+                available: Money.fromCoins(data.available, Currency.KSS).toString(),
+                effective: Money.fromCoins(data.effective, Currency.KSS).toString()
             };
         });
     };
