@@ -6,5 +6,5 @@ export default {
     apiBaseUrl: 'http://134.209.75.3:6869',
     useCustomRequestConfig: false,
    
-    nodes: [{url: nodeUrl, maintainer: 'SOMETHING'}]
+    nodes: [{url: nodeUrl, maintainer: 'SKS'}]
 };
