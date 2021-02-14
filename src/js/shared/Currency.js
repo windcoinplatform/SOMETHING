@@ -16,10 +16,10 @@ export default class Currency {
         }
     }
 
-    static SOMETHING = new Currency({
+    static KSS = new Currency({
         id: '',
-        displayName: 'SOMETHING',
-        shortName: 'SOMETHING',
+        displayName: 'KSS',
+        shortName: 'KSS',
         precision: 8
     });
 
