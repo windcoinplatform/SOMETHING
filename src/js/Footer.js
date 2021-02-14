@@ -10,7 +10,7 @@ const Footer = ({version}) => {
     return (
         <div className="menu-footer">
             <div>Version</div>
-            <div>SOMETHING Team</div>
+            <div>KSS Team</div>
             <div>
                 {socialLinks.map(item =>
                     (<a key={item.id} className={`social ${item.id}`} href={item.url} target="_blank"></a>))}
