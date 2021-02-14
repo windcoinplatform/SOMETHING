@@ -32,7 +32,7 @@ export class InfoService extends ApiClientService {
             api.baseTarget()
         ]).then(axios.spread((version, height, baseTarget) => {
             return {
-                [CAPTIONS.VERSION]: " SKS 0.1.1",
+                [CAPTIONS.VERSION]: " KSS 0.1.1",
                 [CAPTIONS.CURRENT_HEIGHT]: height,
                 [CAPTIONS.BASE_TARGET]: baseTarget.data.baseTarget
             };
